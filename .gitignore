@@ -14,11 +14,6 @@ env/
 .vscode/
 .idea/
 
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
-
 # Test cache
 .pytest_cache/
 .coverage
