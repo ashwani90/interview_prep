@@ -8,11 +8,6 @@ Here are **40 object-oriented programming (OOP) problems and solutions in Python
 
 ### 🟢 **Beginner Level (1–10)**
 
-1. **Create a `Rectangle` class with methods for area and perimeter.**
-
-2. **Define a `BankAccount` class with `deposit` and `withdraw` methods and balance tracking.**
-
-3. **Create a `Book` class with title, author, and pages, and print book details.**
 
 4. **Define a `Person` class and create subclasses like `Student` and `Teacher` with extra fields.**
 
