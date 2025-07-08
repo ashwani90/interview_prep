@@ -9,10 +9,6 @@ Here are **40 object-oriented programming (OOP) problems and solutions in Python
 ### 🟢 **Beginner Level (1–10)**
 
 
-4. **Define a `Person` class and create subclasses like `Student` and `Teacher` with extra fields.**
-
-5. **Create a `Dog` class with `bark()` and override it in a `GermanShepherd` subclass.**
-
 6. **Implement a `Temperature` class that stores Celsius and converts to Fahrenheit.**
 
 7. **Create a `Car` class that tracks speed and supports `accelerate()` and `brake()`.**
