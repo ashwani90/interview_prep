@@ -1,0 +1,10 @@
+# .env.local
+# Rate limiting configuration
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_INTERVAL=60000
+AUTH_RATE_LIMIT_REQUESTS=10
+STRICT_RATE_LIMIT_REQUESTS=5
+
+# Redis for distributed rate limiting (optional)
+UPSTASH_REDIS_URL=
+UPSTASH_REDIS_TOKEN=
