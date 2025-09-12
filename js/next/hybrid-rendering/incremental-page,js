@@ -1,0 +1,57 @@
+// app/(isr)/products/[id]/page.js
+import { notFound } from 'next/navigation';
+
+async function getProduct(id) {
+  const res = await fetch(`https://api.example.com/products/${id}`, {
+    next: { revalidate: 3600 } // Revalidate every hour
+  });
+  
+  if (!res.ok) {
+    if (res.status === 404) {
+      notFound();
+    }
+    throw new Error('Failed to fetch product');
+  }
+  
+  return res.json();
+}
+
+export default async function ProductPage({ params }) {
+  const product = await getProduct(params.id);
+  
+  return (
+    <div>
+      <h1>{product.name}</h1>
+      <p>{product.description}</p>
+      <p>Price: ${product.price}</p>
+      <p>This page uses ISR with 1-hour revalidation.</p>
+    </div>
+  );
+}
+
+// Generate static params at build time
+export async function generateStaticParams() {
+  // Fetch popular products for pre-rendering
+  const res = await fetch('https://api.example.com/products/popular', {
+    next: { revalidate: 3600 }
+  });
+  
+  const products = await res.json();
+  
+  return products.map((product) => ({
+    id: product.id.toString(),
+  }));
+}
+
+// ISR Configuration
+export const revalidate = 3600; // Revalidate every hour
+export const dynamicParams = true; // Allow dynamic params not generated at build time
+
+export async function generateMetadata({ params }) {
+  const product = await getProduct(params.id);
+  
+  return {
+    title: `${product.name} - Product Page`,
+    description: product.description,
+  };
+}
