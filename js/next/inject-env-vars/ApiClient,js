@@ -1,0 +1,34 @@
+// components/ApiClient.js
+'use client';
+
+import { useEnvContext } from './EnvProvider';
+
+export default function ApiClient() {
+  const { NEXT_PUBLIC_API_URL, isLoading } = useEnvContext();
+
+  if (isLoading) {
+    return <div>Loading configuration...</div>;
+  }
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`${NEXT_PUBLIC_API_URL}/data`);
+      const data = await response.json();
+      console.log('Data from API:', data);
+    } catch (error) {
+      console.error('API Error:', error);
+    }
+  };
+
+  return (
+    <div>
+      <p>API URL: {NEXT_PUBLIC_API_URL}</p>
+      <button 
+        onClick={fetchData}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        Fetch Data
+      </button>
+    </div>
+  );
+}
