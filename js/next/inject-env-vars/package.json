@@ -1,0 +1,9 @@
+{
+    "scripts": {
+      "dev": "npm run build:env && next dev",
+      "build": "npm run build:env && next build",
+      "build:env": "node scripts/build-env.js",
+      "start": "next start",
+      "type-check": "tsc --noEmit"
+    }
+  }
