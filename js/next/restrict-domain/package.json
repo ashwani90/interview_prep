@@ -1,0 +1,9 @@
+{
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "check:domains": "node scripts/check-image-domains.js",
+      "check:domains:prod": "NODE_ENV=production node scripts/check-image-domains.js"
+    }
+  }
