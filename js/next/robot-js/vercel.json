@@ -1,0 +1,16 @@
+{
+    "env": {
+      "NEXT_PUBLIC_APP_ENV": "production"
+    },
+    "build": {
+      "env": {
+        "NEXT_PUBLIC_APP_ENV": "production"
+      }
+    },
+    "routes": [
+      {
+        "src": "/robots.txt",
+        "dest": "/api/robots.txt"
+      }
+    ]
+  }
