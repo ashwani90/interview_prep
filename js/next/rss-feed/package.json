@@ -1,0 +1,9 @@
+{
+    "scripts": {
+      "dev": "next dev",
+      "build": "npm run generate:rss && next build",
+      "start": "next start",
+      "generate:rss": "node scripts/generate-rss.js",
+      "generate:rss:watch": "nodemon --watch lib --watch content scripts/generate-rss.js"
+    }
+  }
