@@ -1,0 +1,20 @@
+# DNS Configuration Guide
+
+## For mydomain.com
+
+### A Records
+@ → 76.76.21.21 (Vercel IP)
+
+### CNAME Records
+www → cname.vercel-dns.com
+*. → cname.vercel-dns.com (Wildcard)
+
+### MX Records (if needed for email)
+@ → mail.mydomain.com
+
+### TXT Records
+@ → "v=spf1 include:_spf.vercel.net ~all"
+_dmarc → "v=DMARC1; p=none; rua=mailto:dmarc@mydomain.com"
+
+## SSL Configuration
+Vercel automatically provisions SSL certificates via Let's Encrypt
