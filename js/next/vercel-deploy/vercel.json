@@ -1,0 +1,70 @@
+// vercel.json
+{
+    "version": 3,
+    "name": "my-nextjs-app",
+    "buildCommand": "npm run build",
+    "devCommand": "npm run dev",
+    "installCommand": "npm install",
+    "framework": "nextjs",
+    
+    "headers": [
+      {
+        "source": "/api/(.*)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "https://*.mydomain.com"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,DELETE,OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "X-Requested-With, Content-Type, Authorization"
+          }
+        ]
+      }
+    ],
+    
+    "redirects": [
+      {
+        "source": "/blog",
+        "destination": "https://blog.mydomain.com",
+        "permanent": true
+      },
+      {
+        "source": "/support",
+        "destination": "https://support.mydomain.com",
+        "permanent": false
+      }
+    ],
+    
+    "rewrites": [
+      {
+        "source": "/:path*",
+        "destination": "/:path*"
+      },
+      {
+        "source": "/api/:path*",
+        "destination": "/api/:path*"
+      }
+    ],
+    
+    "env": {
+      "NEXT_PUBLIC_APP_URL": "https://mydomain.com",
+      "NEXT_PUBLIC_WILDCARD_DOMAIN": "*.mydomain.com"
+    },
+    
+    "regions": ["iad1"],
+    
+    "cleanUrls": true,
+    
+    "trailingSlash": false,
+    
+    "functions": {
+      "app/api/**/*.js": {
+        "maxDuration": 30
+      }
+    }
+  }
