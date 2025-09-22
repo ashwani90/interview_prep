@@ -1,0 +1,31 @@
+// lib/env-validator.js
+export function validateDeploymentConfig() {
+  const requiredEnvVars = [
+    'NEXT_PUBLIC_APP_URL',
+    'NEXT_PUBLIC_DOMAIN',
+  ];
+
+  const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);
+
+  if (missingVars.length > 0) {
+    throw new Error(`Missing required environment variables: ${missingVars.join(', ')}`);
+  }
+
+  // Validate domain format
+  const domain = process.env.NEXT_PUBLIC_DOMAIN;
+  if (!isValidDomain(domain)) {
+    throw new Error(`Invalid domain format: ${domain}`);
+  }
+
+  console.log('✅ Environment configuration validated successfully');
+}
+
+function isValidDomain(domain) {
+  const regex = /^([a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
+  return regex.test(domain);
+}
+
+// Run validation on import
+if (typeof window === 'undefined') {
+  validateDeploymentConfig();
+}
