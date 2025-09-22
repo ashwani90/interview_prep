@@ -1,0 +1,16 @@
+// package.json
+{
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint",
+      "deploy": "vercel --prod",
+      "deploy:preview": "vercel",
+      "deploy:alias": "vercel --alias",
+      "domains:list": "vercel domains",
+      "domains:add": "vercel domains add",
+      "domains:remove": "vercel domains remove",
+      "domains:verify": "vercel domains verify"
+    }
+  }
