@@ -1,0 +1,9 @@
+# .env.production
+NEXT_PUBLIC_APP_URL=https://mydomain.com
+NEXT_PUBLIC_API_URL=https://api.mydomain.com
+NEXT_PUBLIC_CDN_URL=https://cdn.mydomain.com
+
+# .env.development
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_CDN_URL=http://localhost:3002
