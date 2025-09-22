@@ -1,0 +1,86 @@
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'standalone',
+  
+  // Custom domain configuration
+  env: {
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    NEXT_PUBLIC_DOMAIN: process.env.NEXT_PUBLIC_DOMAIN,
+  },
+  
+  // Image domains for wildcard subdomains
+  images: {
+    domains: [
+      'mydomain.com',
+      '*.mydomain.com',
+      'localhost:3000',
+      '*.localhost:3000',
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.mydomain.com',
+      },
+      {
+        protocol: 'http',
+        hostname: '**.localhost',
+      },
+    ],
+  },
+  
+  // Headers for security and CORS
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: 'https://*.mydomain.com',
+          },
+        ],
+      },
+    ];
+  },
+  
+  // Redirects configuration
+  async redirects() {
+    return [
+      {
+        source: '/old-path',
+        destination: '/new-path',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Rewrites for custom routing
+  async rewrites() {
+    return [
+      {
+        source: '/subdomain/:path*',
+        destination: '/api/subdomain/:path*',
+      },
+    ];
+  },
+};
+
+module.exports = nextConfig;
