@@ -1,0 +1,33 @@
+.skeleton {
+    background-color: #e0e0e0;
+    margin-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .skeleton:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Optional: Add shimmer effect with CSS (alternative to Framer Motion) */
+  /*
+  .skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  */
+  
+  .skeleton-loader {
+    width: 100%;
+  }
