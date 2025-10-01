@@ -1,0 +1,13 @@
+/* src/index.css */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  canvas {
+    touch-action: none;
+  }
+  
