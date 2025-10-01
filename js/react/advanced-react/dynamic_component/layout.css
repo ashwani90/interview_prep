@@ -1,0 +1,8 @@
+.layout-renderer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .layout-section {
+    margin-bottom: 40px;
+  }
