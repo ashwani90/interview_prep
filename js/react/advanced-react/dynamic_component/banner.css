@@ -1,0 +1,20 @@
+.hero-banner {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
