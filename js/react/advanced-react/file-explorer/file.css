@@ -1,0 +1,60 @@
+.file-explorer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tree-view {
+    margin-top: 15px;
+  }
+  
+  .folder-container {
+    margin-bottom: 5px;
+  }
+  
+  .folder {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .folder:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .folder-name {
+    display: inline-block;
+    padding: 5px;
+    user-select: none;
+  }
+  
+  .folder-contents {
+    margin-left: 15px;
+    border-left: 1px dashed #ccc;
+    padding-left: 10px;
+  }
+  
+  .file {
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 4px;
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .file:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .file:active {
+    cursor: grabbing;
+  }
+  
+  /* Drag and drop styling */
+  .dragging {
+    background-color: #e6f7ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
