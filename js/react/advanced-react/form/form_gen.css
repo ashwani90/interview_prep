@@ -1,0 +1,92 @@
+.dynamic-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-generator {
+    margin-bottom: 20px;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-field input[type="text"],
+  .form-field input[type="email"],
+  .form-field input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .required {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .array-field .array-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .array-field .array-item input {
+    flex: 1;
+  }
+  
+  .object-field {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .form-actions button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-actions button[type="button"] {
+    background-color: #2196F3;
+  }
+  
+  .form-success {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .form-success pre {
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
