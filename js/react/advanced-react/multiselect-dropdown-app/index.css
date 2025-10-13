@@ -1,0 +1,10 @@
+/* src/index.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .min-h-[42px] {
+    min-height: 42px;
+  }
+  
