@@ -1,0 +1,81 @@
+.list-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .list {
+    margin: 20px 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .list-item.dragging {
+    background-color: #e6f7ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-content {
+    flex-grow: 1;
+  }
+  
+  .item-content input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ff4d4f;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .remove-btn:hover {
+    background-color: #fff2f0;
+  }
+  
+  .add-item-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .add-item-form input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-item-form button {
+    padding: 8px 16px;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-item-form button:hover {
+    background-color: #40a9ff;
+  }
