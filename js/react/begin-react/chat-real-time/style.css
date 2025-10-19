@@ -1,0 +1,132 @@
+:root{
+    --bg: #f4f6fb;
+    --panel: #ffffff;
+    --accent: #3b82f6;
+    --muted: #6b7280;
+  }
+  
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:#111827;
+  }
+  
+  .app {
+    max-width:820px;
+    margin:36px auto;
+    padding:20px;
+  }
+  
+  .app-title {
+    margin:0 0 12px;
+    text-align:center;
+  }
+  
+  .chat-window {
+    border-radius:12px;
+    background:var(--panel);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.08);
+    display:flex;
+    flex-direction:column;
+    height:620px;
+    overflow:hidden;
+  }
+  
+  /* message list */
+  .message-list {
+    padding:20px;
+    flex:1;
+    overflow:auto;
+    background:linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  }
+  
+  /* placeholder */
+  .empty {
+    color: var(--muted);
+    text-align:center;
+    margin-top:40px;
+  }
+  
+  /* message item */
+  .message-item {
+    display:flex;
+    margin-bottom:12px;
+    width:100%;
+  }
+  
+  .message-item.me {
+    justify-content:flex-end;
+  }
+  
+  .message-item.other {
+    justify-content:flex-start;
+  }
+  
+  .message-bubble {
+    max-width:72%;
+    padding:10px 12px;
+    border-radius:12px;
+    background:#eef2ff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  
+  .message-item.me .message-bubble{
+    background: linear-gradient(90deg, var(--accent), #2563eb);
+    color:white;
+  }
+  
+  .message-text {
+    font-size:14px;
+    line-height:1.35;
+  }
+  
+  .message-meta{
+    display:flex;
+    gap:8px;
+    margin-top:6px;
+    font-size:11px;
+    color:rgba(0,0,0,0.45);
+  }
+  
+  .message-item.me .message-meta{
+    color:rgba(255,255,255,0.85);
+  }
+  
+  /* input */
+  .message-input {
+    display:flex;
+    gap:8px;
+    padding:12px;
+    border-top:1px solid #eef2f6;
+    align-items:center;
+    background: #fff;
+  }
+  
+  .message-input input{
+    flex:1;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid #e6eef8;
+    outline:none;
+    font-size:14px;
+  }
+  
+  .message-input input:focus{
+    border-color:var(--accent);
+    box-shadow:0 0 0 4px rgba(59,130,246,0.08);
+  }
+  
+  .message-input button{
+    background:var(--accent);
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  
+  .message-input button:hover{opacity:0.95}
+  
