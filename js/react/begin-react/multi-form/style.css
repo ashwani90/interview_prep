@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .app {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  
+  input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 8px 14px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background: #ddd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+  
+  .progress {
+    height: 100%;
+    background: green;
+    border-radius: 3px;
+  }
+  
