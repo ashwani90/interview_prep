@@ -1,0 +1,39 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .app {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .theme-toggle {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .theme-toggle:hover {
+    opacity: 0.8;
+  }
+  
