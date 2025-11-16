@@ -1,0 +1,15 @@
+.layout {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.collapsed + .content {
+    margin-left: 60px;
+  }
+  
