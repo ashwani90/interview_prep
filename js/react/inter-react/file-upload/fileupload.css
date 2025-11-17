@@ -1,0 +1,35 @@
+.drop-zone {
+    border: 2px dashed #aaa;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  
+  .drop-zone.drag-over {
+    border-color: #00aaff;
+    background: #f0faff;
+  }
+  
+  .drop-zone input {
+    display: none;
+  }
+  
+  .preview-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .preview-item {
+    width: 100px;
+    text-align: center;
+  }
+  
+  .preview-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
