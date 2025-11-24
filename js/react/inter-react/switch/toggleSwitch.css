@@ -1,0 +1,87 @@
+/* Base wrapper */
+.ts-toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+  
+  /* Hidden real checkbox but accessible */
+  .ts-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+  
+  /* Track */
+  .ts-track {
+    width: 48px;
+    height: 28px;
+    background: #e6e7eb;
+    border-radius: 999px;
+    padding: 3px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 200ms ease, transform 200ms ease;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Knob */
+  .ts-knob {
+    width: 22px;
+    height: 22px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.15);
+    transform: translateX(0);
+    transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 120ms ease;
+    will-change: transform;
+    display: block;
+  }
+  
+  /* ON state — change track color and slide knob */
+  .ts-on .ts-track {
+    background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+  }
+  
+  .ts-on .ts-knob {
+    transform: translateX(20px);
+  }
+  
+  /* OFF state - subtle */
+  .ts-off .ts-track {
+    background: #e6e7eb;
+  }
+  
+  /* Focus styles */
+  .ts-toggle:focus-visible .ts-track {
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.14);
+  }
+  
+  /* Active / pressed (mouse-down or keyboard) */
+  .ts-toggle:not(.ts-disabled) .ts-track:active .ts-knob,
+  .ts-toggle:not(.ts-disabled):active .ts-knob {
+    box-shadow: 0 6px 10px rgba(16, 24, 40, 0.18);
+    transform: scale(0.98) translateX(0);
+  }
+  
+  /* Disabled state */
+  .ts-disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  
+  /* Small helper: label spacing if you want text next to it */
+  .ts-label {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #111827;
+    vertical-align: middle;
+  }
+  
