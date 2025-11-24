@@ -1,0 +1,40 @@
+.tabs-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .tab-list {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+    background: #f2f2f2;
+  }
+  
+  .tab-button.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .tab-panel {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+  
