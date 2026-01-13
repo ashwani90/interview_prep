@@ -1,0 +1,21 @@
+.review-container {
+    margin-top: 20px;
+  }
+  
+  .review-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+  
+  .review-section h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .review-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
