@@ -1,0 +1,46 @@
+// notificationReducer.js
+const initialState = {
+  queue: [],       // All pending notifications
+  active: [],      // Currently displayed notifications
+  maxVisible: 3,   // Maximum toasts shown at once
+  defaultTimeout: 5000 // Default auto-dismiss time
+};
+
+export default function notificationReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'ADD_NOTIFICATION':
+      const newQueue = [...state.queue, action.payload];
+      return {
+        ...state,
+        queue: newQueue,
+        active: updateActiveToasts(newQueue, state.active, state.maxVisible)
+      };
+      
+    case 'REMOVE_NOTIFICATION':
+      return {
+        ...state,
+        queue: state.queue.filter(n => n.id !== action.payload),
+        active: state.active.filter(n => n.id !== action.payload)
+      };
+      
+    case 'UPDATE_ACTIVE_TOASTS':
+      return {
+        ...state,
+        active: updateActiveToasts(state.queue, [], state.maxVisible)
+      };
+      
+    default:
+      return state;
+  }
+}
+
+// Helper to determine which toasts should be visible
+function updateActiveToasts(queue, currentActive, maxVisible) {
+  const activeIds = currentActive.map(t => t.id);
+  const availableSlots = maxVisible - currentActive.length;
+  const newToasts = queue
+    .filter(t => !activeIds.includes(t.id))
+    .slice(0, availableSlots);
+    
+  return [...currentActive, ...newToasts];
+}
