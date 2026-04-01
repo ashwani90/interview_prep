@@ -8,4 +8,7 @@ class FileManager():
         return self.file
     
     def __exit__(self, exc_type, exc_value, exc_tb):
-        
+        self.file.close()
+
+with FileManager(abcd.txt) as f:
+    f.read()
