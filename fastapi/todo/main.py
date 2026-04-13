@@ -55,3 +55,39 @@ def delete_todo(todo_id: int):
 
 # user Crud System
 @app.post("/users")
+def create_user(user: User):
+    users.append(user)
+    return {"message": "User created successfully", "user": user}
+
+@app.get("/users")
+def get_users():
+    return users
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    for user in users:
+        if user.id == user_id:
+            return user
+    
+    return HTTPException(status_code=404, detail="User not found")
+
+@app.put("/users/{user_id}")
+def update_user(user_id: int, updated_user: UpdateUser):
+    for index, user in enumerate(users):
+        if user.id == user_id:
+            # Update the user's information if provided
+            if updated_user.name is not None:
+                users[index].name = updated_user.name
+            if updated_user.email is not None:
+                users[index].email = updated_user.email
+            return {"message": "User updated successfully", "user": users[index]}
+    return HTTPException(status_code=404, detail="User not found")
+
+@app.delete("/users/{user_id}")
+def delete_user(user_id: int):
+    for index, user in enumerate(users):
+        if user.id == user_id:
+            users.pop(index)
+            return {"message": "User deleted successfully"}
+    return HTTPException(status_code=404, detail="User not found")
+
