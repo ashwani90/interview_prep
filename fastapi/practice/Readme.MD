@@ -22,3 +22,10 @@ uvicorn main:app --reload # Run the server
 Automatic docs at - 127.0.0.1:8000/docs
 
 
+DB InTegration
+
+```
+pip install sqlalchemy
+pip install databases
+```
+
