@@ -1,0 +1,2 @@
+class UserCreate(BaseModel):
+    pass
