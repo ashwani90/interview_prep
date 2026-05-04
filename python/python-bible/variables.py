@@ -40,3 +40,7 @@ names.count('Alice')
 names.reverse() # or names[::-1]
 
 names.pop()
+
+# One member tuple
+one_temp = 'o', # or tuple(['o'])
+
