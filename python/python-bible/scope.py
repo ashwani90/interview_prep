@@ -19,3 +19,9 @@ def change_global():
     # Changes the global value
     print(x)
 
+# local variables
+def foo():
+    if True:
+        a = 5
+    print(a)
+
