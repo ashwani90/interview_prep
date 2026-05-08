@@ -44,3 +44,16 @@ names.pop()
 # One member tuple
 one_temp = 'o', # or tuple(['o'])
 
+# loop through the dictionary keys
+for k in state_caps.keys():
+    print('{} is the capital of {}'.format(state_caps[k], k))
+
+# convert list to set
+set(names)
+
+# defaultdict will never raise an KeyError any key that does not exist it gets the default value is returned
+from collections import defaultdict
+state_caps = defaultdict(str)
+state_caps['California'] = 'Sacramento'
+state_caps['Texas'] # Returns empty string (default value) since key doesn't exist
+
