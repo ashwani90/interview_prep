@@ -25,3 +25,10 @@ def foo():
         a = 5
     print(a)
 
+
+# usage of del command
+del x
+
+# can also delete a property of an object
+del v.name # or the complete object
+
