@@ -25,6 +25,3 @@ a.count(7)
 
 # sort the list
 a.sort(reverse=True)
-
-# list can also be sorted using attrgetter and itemgetter
-# 141
