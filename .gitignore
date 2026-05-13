@@ -39,3 +39,7 @@ htmlcov/
 # MacOS / Windows metadata
 .DS_Store
 Thumbs.db
+
+*.mid
+*.MID 
+*.json
