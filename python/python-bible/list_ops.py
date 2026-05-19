@@ -62,3 +62,14 @@ clist = [3]
 for i, j, k in itertools.zip_longest(alist, blist, clist, fillvalue=None):
     print(i, j, k)
 
+
+# list slicing using step argument
+lst[::2]
+
+# select sublist usigng that
+lst[1:4:2]
+# reverse a list
+lst[::-1]
+# shift list
+lst[:4]+lst[4:]
+
